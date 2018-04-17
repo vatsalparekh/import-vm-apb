@@ -30,7 +30,7 @@
 
 - name: Build OfflineVM
   template:
-    src: "ovm-{{ vm_type }}.yml"
+    src: "{{ role_path }}/../templates/{{ vm_type }}-ovm.yml"
     dest: /tmp/ovm.yml
 
 - name: Provision OfflineVM
