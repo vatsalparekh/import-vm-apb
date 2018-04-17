@@ -73,13 +73,11 @@ plans:
         name: disk_image_url
         type: string
         required: true
-      - title: Virtual Machine Type
-        name: vm_type
+      - title: Operating system type
+        name: os_type
+        default: linux
+        enum: ['linux', 'windows']
         type: enum
-        enum: ['default']
-        required: True
-        default: default
-        display_type: select
       - title: Virtual Machine Name
         name: vm_name
         type: string
@@ -94,3 +92,8 @@ plans:
         required: true
         type: int
         default: 1024
+      - title: Virtual machine is imported as
+        name: image_type
+        default: ovm
+        enum: ['ovm', 'template']
+        type: enum
